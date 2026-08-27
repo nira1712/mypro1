@@ -1,48 +1,56 @@
 <html>
        <title>Ticket Booking</title>
+       <style>
+        body {
+    background: linear-gradient(to right, #7c6341, #662f36);
+}
+
+       </style>
     <body>
-        <h1>New Registration</h1>
+       
         <center>
-        <form id="registrationForm">
+        <form action="login.html" id="registrationForm" style="background-color: rgb(180, 177, 161); margin-top: 130px;  border: 2px solid black; border-radius: 0; padding: 20px; width: 300px; opacity:0.8;">
+             
+             <h1>New Registration</h1>
             <table>
         <tr>
             <td> <label> Name</label></td>
-            <td><input type="text" id="name"></td>
+            <td><input type="text" id="name" required></td>
         </tr>
             <td> <label>Date of Birth</label></td>
-            <td> <input type="date" id="dob"></td>
+            <td> <input type="date" id="dob" required></td>
         <tr>
-            <td>Gender</td>
+           <td><label> Gender </label></td>
             <td>
-                <input type="radio" name="gender" value="Male"> Male
-                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Male" required> Male
+                <input type="radio" name="gender" value="Female" required> Female
                 <input type="radio" name="gender" value="Other"> Other
             </td>
         </tr>
         <tr>
             <td><label> Email </label></td>
-            <td><input type="email" id="email"></td>
+            <td><input type="email" id="email" required></td>
         </tr>
         <tr>
             <td><label>Username</label></td>
-            <td><input type="text" id="username" </td>
+            <td><input type="text" id="username" required> </td>
         </tr>
         <tr>
             <td><label> Password</label></td>
-            <td><input type="password" id="password"></td>
+            <td><input type="password" id="password" required></td>
         </tr>
         <tr>
             <td><label>Confirm Password</label></td>
-            <td><input type="password" id="password"</td>
+            <td><input type="password" id="password" required></td>
         </tr>
         <tr>
             <td><label>Address</label></td>
-            <td><input type="text" id="address"></td>
+            <td><input type="text" id="address" required></td>
         </tr>
         <tr>
            <td>City</td>
         <td>
-            <select name="city">
+            <select name="city" required>
                 <option>Select city</option>
                 <option>Chennai</option>
                 <option>Bangalore</option>
@@ -55,7 +63,7 @@
         <tr>
             <td>State</td>
         <td>
-            <select name="state" >
+            <select name="state"  required>
                 <option>Select State</option>
                 <option>Tamil Nadu</option>
                 <option>Karnataka</option>
@@ -68,7 +76,15 @@
         </tr>
         <tr>
             <td><label>Pincode</label></td>
-            <td><input type="text" name="pincode" maxlength="6"></td>
+            <td><input type="text" name="pincode" maxlength="6" required></td>
+        </tr>
+        <tr> <td colspan="" style="text-align: center;"></td></tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                 
+                <button type="submit" style="background-color: hwb(212 33% 40%);">Submit</button></td>
+           
+
         </tr>
         
             
