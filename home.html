@@ -1,0 +1,274 @@
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                background-color: #f4f1eb;
+                color: #263238;
+                font-family: Georgia, 'Times New Roman', serif;
+            }
+
+            form{
+                background-color: rgb(21, 21, 73);
+                padding: 20px;
+                margin: 0;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+            }
+            nav a:hover{
+                text-decoration: underline;
+                
+            }
+            nav a{
+                color: aliceblue;
+                text-align: right;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+              
+            }
+            .menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.profile-icon img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+            #aboutus,
+            .contact {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 64px 7%;
+            }
+
+            #aboutus {
+                background-color: #fffdf9;
+            }
+
+            #aboutus h1,
+            .contact h2 {
+                margin-top: 0;
+                color: #174a5b;
+                font-size: 36px;
+            }
+
+            #aboutus h1::after,
+            .contact h2::after {
+                display: block;
+                width: 58px;
+                height: 4px;
+                margin-top: 12px;
+                background-color: #e08f62;
+                content: "";
+            }
+
+            #aboutus p,
+            .contact > p {
+                max-width: 780px;
+                font-size: 18px;
+                line-height: 1.7;
+            }
+
+            #aboutus h2 {
+                margin-top: 34px;
+                color: #174a5b;
+            }
+
+            .benefits {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 14px;
+                padding: 0;
+                list-style: none;
+            }
+
+            .benefits li,
+            .contact-info p {
+                padding: 16px;
+                border-left: 4px solid #e08f62;
+                background-color: #f1e7da;
+            }
+
+            .contact {
+                max-width: none;
+                background-color: #174a5b;
+                color: #f8f4ec;
+            }
+
+            .contact h2 {
+                color: #ffffff;
+            }
+
+            .contact-info {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 16px;
+                margin-top: 28px;
+            }
+
+            .contact-info p {
+                margin: 0;
+                border-left: 0;
+                border-top: 4px solid #e08f62;
+                background-color: #236477;
+            }
+
+            @media (max-width: 700px) {
+                #aboutus,
+                .contact {
+                    padding: 42px 6%;
+                }
+
+                #aboutus h1,
+                .contact h2 {
+                    font-size: 30px;
+                }
+
+                .benefits,
+                .contact-info {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+    html {
+    scroll-behavior: smooth;
+}
+
+.home-slider {
+    position: relative;
+    width: 100%;
+    height: clamp(280px, 48vw, 560px);
+    overflow: hidden;
+    background-color: #d9e4e5;
+}
+
+.home-slide {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    animation: slide-fade 24s infinite;
+}
+
+.home-slide:nth-child(1) {
+    background-image: url("hbg1.jpg");
+    animation-delay: 0s;
+}
+
+.home-slide:nth-child(2) {
+    background-image: url("bus.jpg");
+    animation-delay: 6s;
+}
+
+.home-slide:nth-child(3) {
+    background-image: url("flight.jpg");
+    animation-delay: 12s;
+}
+
+.home-slide:nth-child(4) {
+    background-image: url("train.jpg");
+    animation-delay: 18s;
+}
+
+@keyframes slide-fade {
+    0%, 28% {
+        opacity: 1;
+    }
+    33%, 95% {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-slide {
+        animation: none;
+    }
+
+    .home-slide:first-child {
+        opacity: 1;
+    }
+}
+
+        </style>
+    </head>
+    <body id="home">
+        <form>
+        <div>
+        <nav style="text-align: right;"  >
+            <a href="#home" style="margin: 20px;"> Home</a>
+            <a href="#aboutus"  style="margin: 20px;" >About</a>
+            <a href="booking.html"  style="margin: 20px;">Booking</a>
+            <a href="#contactus"  style="margin: 20px;">Contact</a>
+             <a href="login.html" class="profile-icon" style="margin: 20px;"><img src="avater.jpg"></a>
+        </nav>
+        </div>
+        </form>
+        <section class="home-slider" aria-label="Travel destinations">
+            <div class="home-slide"></div>
+            <div class="home-slide"></div>
+            <div class="home-slide"></div>
+            <div class="home-slide"></div>
+        </section>
+
+        <div id="aboutus">
+            <h1>About Us</h1>
+            <p>Welcome to Travels & Trips, your trusted partner for easy and convenient travel ticket booking.</p>
+            <p>Whether you are planning a family vacation, a romantic getaway, a business trip, or an adventure with friends, we help you explore destinations and book travel tickets quickly and easily.</p>
+            <p>We believe travelling is about creating beautiful memories, experiencing different cultures, and discovering the world. Our goal is to provide a smooth, reliable, and enjoyable booking experience for every traveller.</p>
+            <h2>Why Choose Us?</h2>
+            <ul class="benefits">
+                <li>Easy and fast ticket booking</li>
+                <li>Affordable travel deals</li>
+                <li>Multiple destinations</li>
+                <li>Safe and secure booking</li>
+                <li>Friendly customer support</li>
+                <li>Comfortable and convenient travel</li>
+            </ul>
+       </div>
+        <section id="contactus" class="contact">
+    <h2>Contact Us</h2>
+
+    <p>
+        Have questions or need help with your travel booking?
+        We are here to help! Feel free to contact Travels & Trips
+        for information about tickets, destinations, bookings, or
+        travel services. Our friendly support team is always ready
+        to assist you and make your travel experience smooth and
+        hassle-free.
+    </p>
+
+    <div class="contact-info">
+        <p><strong>📍 Address:</strong> 123 Travel Street, Chennai, India</p>
+        <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+        <p><strong>📧 Email:</strong> travelandtrips@gmail.com</p>
+    </div>
+</section>
+
+    </body>
+</html>
